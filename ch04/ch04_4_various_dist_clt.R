@@ -1,3 +1,6 @@
+# 다양한 분포 그래프 (카이제곱, T, F, 포아송)
+windowsFonts(malgun = "맑은 고딕")
+
 # Chi Square 분포
 n <- 1000
 df <- 3
@@ -25,7 +28,7 @@ c(mean(ch.64.mean), sd(ch.64.mean))
 m <- df
 s <- sqrt(2 * df)
 
-par(mfrow=c(2,2), oma = c(0, 0, 2, 0))
+par(mfrow=c(2,2), family="malgun", oma = c(0, 0, 2, 0))
 hist(ch.2.mean, prob=T, main="표본 크기 : 2", 
      ylab="", xlab="", col="orange", border="red")
 x1 <- seq(min(ch.2.mean), max(ch.2.mean), length=1000)

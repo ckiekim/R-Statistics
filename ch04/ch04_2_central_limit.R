@@ -53,8 +53,8 @@ c(mean(b.4.mean), sd(b.4.mean))
 c(mean(b.32.mean), sd(b.32.mean))
 c(mean(b.64.mean), sd(b.64.mean))
 
-# B(10, 0.1)의 분산과 표준편차
-c(10*0.1*0.9, sqrt(10*0.1*0.9))
+# B(10, 0.1)의 평균, 분산 및 표준편차
+c(10*0.1, 10*0.1*0.9, sqrt(10*0.1*0.9))
 par(mfrow=c(2,2))
 hist(b.2.mean, prob=T, xlim=c(0, 4), main="표본 크기 : 2", 
      ylab="", xlab="", col="orange", border="red")

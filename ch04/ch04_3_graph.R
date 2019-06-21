@@ -1,5 +1,6 @@
 # 다양한 표본분포 그래프
-par(mfrow=c(1,1), oma = c(0, 0, 0, 0))
+windowsFonts(malgun = "맑은 고딕")
+par(mfrow=c(1,1), family="malgun", oma = c(0, 0, 0, 0))
 
 # 그림 4.10 카이제곱 분포
 df <- c(1, 3, 5, 10)
