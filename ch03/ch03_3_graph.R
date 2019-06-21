@@ -40,6 +40,11 @@ points(x3, b3, pch=16, col="red")
 lines(x2, b2, col="blue")
 points(x2, b2, pch=17, col="blue")
 lines(x1, b1, col="black")
+points(x1, b1, pch=15, col="black")
+
+legends<- c("n=30", "n=10", "n=5")
+legend("topright", legend=legends, pch=c(16, 17, 15), 
+       col=c("red", "blue", "black"))
 
 #그림 3.12
 x <- seq(-4, 4, by=0.01)

@@ -224,16 +224,4 @@ lines(x4, y4, lty=2, lwd=2, col="blue")
 mtext("포아송 표본평균 분포(lambda=3인 경우)", outer = TRUE, cex = 1.2)
 
 par(mfrow=c(1,1), oma = c(0, 0, 0, 0))
-rs<-data.frame()
-for (i in 1:20) {
-  rs[i,1]<-dpois(i,3)
-  rs[i,2]<-dpois(i,5)
-  rs[i,3]<-dpois(i,10)
-}
 
-plot(rs[,1], type="b", col="red", lwd="2", main="Poisson 분포",
-     xlab="X", ylab="f(x)")                      # lamda=3
-lines(rs[,2], type="b", col="blue", lwd="2")     # lamda=5
-lines(rs[,3], type="b", col="green", lwd="2")    # lamda=10
-legend(x=12, y=0.22, c("lamda=3", "lamda=5", "lamda=10"),
-       col=c("red", "blue", "green"), pch = c(1, 1, 1))
