@@ -10,6 +10,19 @@ par(mfrow=c(2,2))
 plot(fit)
 par(mfrow=c(1,1))
 
+# 다중공선성: 독립변수간 강한 상관관계가 나타나는 문제
+# Correlation (0.9 이상이면 다중공선성 의심)
+states.cor <- cor(states[2:5])
+states.cor
+
+# VIF(Variation Inflation Factor) 계산 (10 이상이면 다중공선성 의심)
+library(car)
+vif(fit)
+
+# Condition Number (15 이상이면 다중공선성의 가능성이 있음)
+eigen.val <- eigen(states.cor)$values
+sqrt(max(eigen.val)/eigen.val)
+
 fit1 <- lm(Murder ~ ., data=states)
 summary(fit1)
 
